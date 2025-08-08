@@ -3,7 +3,8 @@ import path from "path";
 import { v4 as uuidv4 } from "uuid";
 import { Contact, ContactInput, ContactInputSchema, ContactSchema } from "../validators/Contact.types";
 
-const DATA_FILE = path.join(__dirname, "../data/contacts.json");
+
+const DATA_FILE = path.resolve(process.cwd(), "src/data/contacts.json");
 
 class ContactService {
     async readContacts(): Promise<Contact[]> {
@@ -14,6 +15,13 @@ class ContactService {
                 ? list.filter((c) => ContactSchema.safeParse(c).success)
                 : [];
         } catch (err) {
+            // If file doesn't exist, return empty array
+            if ((err as NodeJS.ErrnoException).code === "ENOENT") {
+                console.log("Contacts file not found, creating empty file");
+                await this.addContacts([]);
+                return [];
+            }
+            console.error("Error reading contacts file:", err);
             throw new Error("Could not read contacts file");
         }
     }
@@ -31,7 +39,6 @@ class ContactService {
     }
 
     async addContact(input: ContactInput): Promise<Contact> {
-        // Validate input (already checked in controller; redundant here for safety)
         const valid = ContactInputSchema.parse(input);
 
         const now = new Date().toISOString();

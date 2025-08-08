@@ -9,7 +9,6 @@ import { ContactInputSchema } from "../validators/Contact.types";
 export async function listContacts(req: Request, res: Response, next: NextFunction) {
     try {
         const contacts = await contactService.getAllContacts();
-        console.log("Contacts: ", contacts)
         return res.status(200).json(new ApiResponce(200, { contacts }, "list all contacts"));
     } catch (err) {
         next(err);
