@@ -1,8 +1,8 @@
-# **Contact manager**
+# **Contact manager backend**
 
 ## **Description**
 
-This is a frontend project built with nextjs, tailwindcss, shadcn.
+This is a backend project built with Node.js, Express, and MongoDB.
 
 ## **Project Setup**
 
@@ -13,7 +13,7 @@ This is a frontend project built with nextjs, tailwindcss, shadcn.
 
 ```bash
 git clone https://github.com/cryptomafiaPB/Contact-Management.git
-cd Contact-Management/frontend
+cd Contact-Management/server
 npm install
 npm run dev
 ```
@@ -21,8 +21,8 @@ npm run dev
 ### Installation
 
 1. Clone the repository: `git clone https://github.com/cryptomafiaPB/Contact-Management.git`
-2. Navigate to the project directory: `cd Contact-Management/frontend`
-3. Install dependencies: `npm install` or `yarn install`
+2. Navigate to the project directory: `cd Contact-Management/server`
+3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
 
 ## **Environment Setup**
@@ -30,7 +30,9 @@ npm run dev
 Create a new file named `.env` in the project root directory and add the following lines:
 
 ```makefile
-NEXT_PUBLIC_CONTACT_API_BASE=http://localhost:4000/api/v1/contacts
+PORT=4000
+CORS_ORIGIN=http://localhost:3000
+ENVIRONMENT=development
 ```
 
 ## **Contributing**
