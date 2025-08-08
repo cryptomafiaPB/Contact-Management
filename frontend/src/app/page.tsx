@@ -41,7 +41,7 @@ export default function HomePage() {
         <ThemeToggle />
       </div>
       <div className="w-full md:max-w-lg p-4 sm:p-8 rounded-xl bg-white/80 dark:bg-black/80 shadow-md backdrop-blur-xl transition-colors duration-500">
-        <h1 className="text-4xl font-bold text-center mb-4 tracking-tight">Contact Management</h1>
+        <h1 className="text-4xl font-bold text-center mb-4 tracking-tight dark:text-gray-50">Contact Management</h1>
         <ContactForm onContactCreated={onContactCreated} />
         {loading ? (
           <div className="animate-pulse space-y-2 mt-6">

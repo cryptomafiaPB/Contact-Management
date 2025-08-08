@@ -33,7 +33,7 @@ export default function ContactForm({ onContactCreated }: Props) {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2 mb-6 animate-fade-in" autoComplete="off">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-2 mb-6 animate-fade-in dark:outline-white dark:text-gray-50" autoComplete="off">
             <Input placeholder="Name" value={values.name} maxLength={100} disabled={busy}
                 onChange={(e) => setValues(v => ({ ...v, name: e.target.value }))} autoFocus required
             />
