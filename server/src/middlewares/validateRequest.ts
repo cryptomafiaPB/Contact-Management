@@ -1,17 +1,19 @@
 import { NextFunction, Request, Response } from 'express';
-import { ZodObject } from 'zod';
+import { ZodObject, ZodError } from 'zod';
+import ApiError from '../utils/api-error';
 
-// validate request body, params and query
-export const validateRequest = (schema: ZodObject) => (req: Request, res: Response, next: NextFunction) => {
+// validate request body
+export const validateRequest = (schema: ZodObject<any>) => (req: Request, res: Response, next: NextFunction) => {
     try {
-        schema.parse({
-            body: req.body,
-            params: req.params,
-            query: req.query,
-        });
+        console.log('Validating request body:', req.body);
+        // Validate only the request body
+        req.body = schema.parse(req.body);
         next();
     } catch (err) {
-        const error = err as any;
-        next(error);
+        console.log('Validation error:', err);
+        if (err instanceof ZodError) {
+            return next(new ApiError(400, 'Validation failed', err.issues as any));
+        }
+        next(err);
     }
 };

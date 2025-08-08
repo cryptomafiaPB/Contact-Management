@@ -37,7 +37,7 @@ export async function removeContact(req: Request, res: Response, next: NextFunct
         if (!deleted) {
             throw new ApiError(404, "Contact not found");
         }
-        res.status(201).json(new ApiResponce(201, {}, "deleted contact successfully"));
+        res.status(202).json(new ApiResponce(202, {}, "deleted contact successfully"));
     } catch (err) {
         next(err);
     }

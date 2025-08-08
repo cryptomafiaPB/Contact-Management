@@ -118,5 +118,13 @@
     "id": "f5be6cad-7c14-45d6-9505-cb61311feb8b",
     "createdAt": "2025-08-08T10:34:57.891Z",
     "updatedAt": "2025-08-08T10:34:57.891Z"
+  },
+  {
+    "name": "Uncle trump",
+    "email": "pranavbagal@gmail.com",
+    "phone": "7499276654",
+    "id": "c65b6e38-21d8-4d35-b112-891a336deb90",
+    "createdAt": "2025-08-08T11:22:28.086Z",
+    "updatedAt": "2025-08-08T11:22:28.086Z"
   }
 ]

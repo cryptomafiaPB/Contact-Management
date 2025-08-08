@@ -2,7 +2,6 @@ import { promises as fs } from "fs";
 import path from "path";
 import { v4 as uuidv4 } from "uuid";
 import { Contact, ContactInput, ContactInputSchema, ContactSchema } from "../validators/Contact.types";
-import constants from "constants";
 
 const DATA_FILE = path.join(__dirname, "../data/contacts.json");
 
