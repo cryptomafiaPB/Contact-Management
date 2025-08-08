@@ -1,21 +1,5 @@
 [
   {
-    "id": "550e8400-e29b-41d4-a716-446655440002",
-    "name": "Sarah Johnson",
-    "email": "sarah.johnson@company.com",
-    "phone": "9876543210",
-    "createdAt": "2024-01-16T14:22:00.000Z",
-    "updatedAt": "2024-01-18T09:15:00.000Z"
-  },
-  {
-    "id": "550e8400-e29b-41d4-a716-446655440003",
-    "name": "Michael Brown",
-    "email": "michael.brown@techstartup.io",
-    "phone": "+44123456789",
-    "createdAt": "2024-01-17T08:45:00.000Z",
-    "updatedAt": "2024-01-17T08:45:00.000Z"
-  },
-  {
     "id": "550e8400-e29b-41d4-a716-446655440004",
     "name": "Emily Davis",
     "email": "emily.davis@consulting.com",
@@ -118,5 +102,21 @@
     "id": "c65b6e38-21d8-4d35-b112-891a336deb90",
     "createdAt": "2025-08-08T11:22:28.086Z",
     "updatedAt": "2025-08-08T11:22:28.086Z"
+  },
+  {
+    "name": "Hakla Khan",
+    "email": "hakla@gmail.com",
+    "phone": "8753628362",
+    "id": "cc84d4ab-4503-4c67-aac4-926b34c54383",
+    "createdAt": "2025-08-08T13:25:02.473Z",
+    "updatedAt": "2025-08-08T13:25:02.473Z"
+  },
+  {
+    "name": "u",
+    "email": "pranavbagal@gmail.com",
+    "phone": "7499276654",
+    "id": "c4262a90-b20d-43b7-9390-a333f6844ef5",
+    "createdAt": "2025-08-08T13:28:55.591Z",
+    "updatedAt": "2025-08-08T13:28:55.591Z"
   }
 ]

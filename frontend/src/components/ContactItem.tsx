@@ -9,7 +9,7 @@ type Props = {
 
 export default function ContactItem({ contact, onDelete }: Props) {
     return (
-        <li className="flex items-center justify-between p-3 rounded-xl bg-accent/10 dark:bg-accent/20 shadow transition hover:scale-[1.02] animate-fade-in">
+        <li className="flex items-center cursor-pointer justify-between p-3 rounded-xl bg-gray-100 hover:bg-gray-50 dark:bg-accent/20 shadow transition hover:scale-[1.02] animate-fade-in">
             <div>
                 <div className="font-semibold">{contact.name}</div>
                 <div className="text-xs text-gray-500 dark:text-gray-300">{contact.email}</div>
@@ -18,7 +18,7 @@ export default function ContactItem({ contact, onDelete }: Props) {
             <Button
                 size="icon"
                 variant="ghost"
-                className="ml-2 text-red-500 hover:text-red-700"
+                className="ml-2 text-red-500 hover:text-red-700 cursor-pointer"
                 aria-label={`Delete ${contact.name}`}
                 onClick={() => onDelete(contact.id)}
             >

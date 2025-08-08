@@ -43,7 +43,7 @@ export default function ContactForm({ onContactCreated }: Props) {
             <Input placeholder="Phone" value={values.phone} maxLength={15} pattern="^\+?\d{8,15}$" inputMode="tel" disabled={busy}
                 onChange={(e) => setValues(v => ({ ...v, phone: e.target.value }))} required
             />
-            <Button disabled={busy} className="mt-1">{busy ? "Adding..." : "Add Contact"}</Button>
+            <Button disabled={busy} className="mt-1 cursor-pointer">{busy ? "Adding..." : "Add Contact"}</Button>
         </form>
     );
 }

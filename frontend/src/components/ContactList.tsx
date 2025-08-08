@@ -21,7 +21,7 @@ export default function ContactList({ contacts, onDelete }: Props) {
     }
 
     return (
-        <ul className="space-y-2">
+        <ul className="space-y-4 mt-6">
             {contacts.map((c) => (
                 <ContactItem key={c.id} contact={c} onDelete={onDelete} />
             ))}

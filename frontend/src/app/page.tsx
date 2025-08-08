@@ -37,10 +37,10 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4">
-      <div className="absolute top-4 right-4">
+      <div className="h-16 w-full flex items-center justify-end top-4 right-4">
         <ThemeToggle />
       </div>
-      <div className="w-full md:max-w p-8 rounded-xl bg-white/80 dark:bg-black/80 shadow-md backdrop-blur-xl transition-colors duration-500">
+      <div className="w-full md:max-w-lg p-4 sm:p-8 rounded-xl bg-white/80 dark:bg-black/80 shadow-md backdrop-blur-xl transition-colors duration-500">
         <h1 className="text-4xl font-bold text-center mb-4 tracking-tight">Contact Management</h1>
         <ContactForm onContactCreated={onContactCreated} />
         {loading ? (
