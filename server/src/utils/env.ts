@@ -7,8 +7,6 @@ dotenv.config({ path: ".env" });
 const envSchema = z.object({
     PORT: z.string().transform(Number).default(3000),
     CORS_ORIGIN: z.url().default('http://localhost:5173'),
-    RATE_LIMIT_WINDOW_MS: z.string().transform(Number).default(60000),
-    RATE_LIMIT_MAX: z.string().transform(Number).default(10),
     ENVIRONMENT: z.enum(['development', 'production']).default('development'),
 })
 

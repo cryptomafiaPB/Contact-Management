@@ -25,16 +25,16 @@
         // "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
         // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
         /* Modules */
-        "module": "ES2020", /* Specify what module code is generated. */
+        "module": "CommonJS", /* Use CommonJS for Node runtime with ts-node */
         "rootDir": "./src", /* Specify the root folder within your source files. */
-        "moduleResolution": "Bundler", /* Specify how TypeScript looks up a file from a given module specifier. */
+        "moduleResolution": "Node", /* Node module resolution */
         // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
         // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
         // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
-        "typeRoots": [
-            "./src/types",
-            "./node_modules@types"
-        ], /* Specify multiple folders that act like './node_modules/@types'. */
+        // "typeRoots": [
+        //     "./src/types",
+        //     "./node_modules/@types"
+        // ], /* Specify multiple folders that act like './node_modules/@types'. */
         // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
         // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
         // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
